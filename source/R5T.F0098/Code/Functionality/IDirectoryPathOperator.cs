@@ -36,6 +36,22 @@ namespace R5T.F0098
 
             return output;
         }
+
+        public string Get_DateTimedApplicationSpecificOutputDirectoryPath(
+            string baseOutputDirectoryPath,
+            string applicationName,
+            DateTime dateTime)
+        {
+            var applicationDirectoryName = Internal.DirectoryNameOperator.Instance.Get_ApplicationDirectoryName(applicationName);
+            var dateTimedDirectoryName = F0000.DirectoryNameOperator.Instance.Get_DateTimedDirectoryName(dateTime);
+
+            var output = Instances.PathOperator.GetDirectoryPath(
+                baseOutputDirectoryPath,
+                applicationDirectoryName,
+                dateTimedDirectoryName);
+
+            return output;
+        }
     }
 }
 
