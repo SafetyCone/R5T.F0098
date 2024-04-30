@@ -12,9 +12,9 @@ namespace R5T.F0098
             string baseOutputDirectoryPath,
             string applicationName)
         {
-            var applicationDirectoryName = Internal.DirectoryNameOperator.Instance.Get_ApplicationDirectoryName(applicationName);
+            var applicationDirectoryName = Instances.DirectoryNameOperator_Internal.Get_ApplicationDirectoryName(applicationName);
 
-            var applicationSpecificOutputDirectoryPath = Instances.PathOperator.GetDirectoryPath(
+            var applicationSpecificOutputDirectoryPath = Instances.PathOperator.Get_DirectoryPath(
                 baseOutputDirectoryPath,
                 applicationDirectoryName);
 
@@ -26,10 +26,10 @@ namespace R5T.F0098
             string applicationName,
             DateTime date)
         {
-            var applicationDirectoryName = Internal.DirectoryNameOperator.Instance.Get_ApplicationDirectoryName(applicationName);
-            var datedDirectoryName = F0000.DirectoryNameOperator.Instance.Get_DatedDirectoryName(date);
+            var applicationDirectoryName = Instances.DirectoryNameOperator_Internal.Get_ApplicationDirectoryName(applicationName);
+            var datedDirectoryName = Instances.DirectoryNameOperator.Get_DatedDirectoryName(date);
 
-            var output = Instances.PathOperator.GetDirectoryPath(
+            var output = Instances.PathOperator.Get_DirectoryPath(
                 baseOutputDirectoryPath,
                 applicationDirectoryName,
                 datedDirectoryName);
@@ -42,10 +42,10 @@ namespace R5T.F0098
             string applicationName,
             DateTime dateTime)
         {
-            var applicationDirectoryName = Internal.DirectoryNameOperator.Instance.Get_ApplicationDirectoryName(applicationName);
-            var dateTimedDirectoryName = F0000.DirectoryNameOperator.Instance.Get_DateTimedDirectoryName(dateTime);
+            var applicationDirectoryName = Instances.DirectoryNameOperator_Internal.Get_ApplicationDirectoryName(applicationName);
+            var dateTimedDirectoryName = Instances.DirectoryNameOperator.Get_DateTimedDirectoryName(dateTime);
 
-            var output = Instances.PathOperator.GetDirectoryPath(
+            var output = Instances.PathOperator.Get_DirectoryPath(
                 baseOutputDirectoryPath,
                 applicationDirectoryName,
                 dateTimedDirectoryName);
@@ -65,9 +65,9 @@ namespace R5T.F0098.Internal
             string baseOutputDirectoryPath,
             string applicationName)
         {
-            var applicationDirectoryName = DirectoryNameOperator.Instance.Get_ApplicationDirectoryName(applicationName);
+            var applicationDirectoryName = Instances.DirectoryNameOperator_Internal.Get_ApplicationDirectoryName(applicationName);
 
-            var applicationSpecificOutputDirectoryPath = Instances.PathOperator.GetDirectoryPath(
+            var applicationSpecificOutputDirectoryPath = Instances.PathOperator.Get_DirectoryPath(
                 baseOutputDirectoryPath,
                 applicationDirectoryName);
 

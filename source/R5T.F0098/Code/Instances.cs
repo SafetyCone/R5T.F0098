@@ -5,6 +5,8 @@ namespace R5T.F0098
 {
     public static class Instances
     {
-        public static F0002.IPathOperator PathOperator => F0002.PathOperator.Instance;
+        public static IDirectoryNameOperator DirectoryNameOperator => F0098.DirectoryNameOperator.Instance;
+        public static Internal.IDirectoryNameOperator DirectoryNameOperator_Internal => Internal.DirectoryNameOperator.Instance;
+        public static L0066.IPathOperator PathOperator => L0066.PathOperator.Instance;
     }
 }
